@@ -1,0 +1,7 @@
+FROM sameersbn/bind
+
+COPY zone/db.olivier.lan /etc/bind
+
+COPY conf/named.conf.default-zones /etc/bind
+
+EXPOSE 53/udp 53/tcp 10000/tcp

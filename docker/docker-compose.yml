@@ -1,0 +1,18 @@
+version: "3.0"
+
+services:
+  dns:
+    image: bindcustom2
+    container_name: customdns
+    ports:
+      - "53:53/udp" 
+      - "53:53/tcp" 
+      - "10000:10000/tcp"
+
+  nginx:
+    image: nginxcustom
+    container_name: customweb
+    ports: 
+      - "80:80/tcp"
+    volumes:
+      - ./nginx/code:/app

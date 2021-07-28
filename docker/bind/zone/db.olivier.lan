@@ -1,0 +1,16 @@
+;
+; BIND data file for local loopback interface
+;
+$ORIGIN olivier.lan.
+$TTL	3D
+@	IN	SOA	debian.olivier.lan. email.olivier.lan. (
+			 270720211	; Serial
+			 8H		; Refresh
+			 2H		; Retry
+			 4W		; Expire
+			 3D )	; Negative Cache TTL
+;
+@	IN	NS	debian.olivier.lan.
+@	IN	A	192.168.20.140
+;
+debian	IN	A	192.168.20.140
